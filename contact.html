@@ -6,15 +6,17 @@
     <style>
       html, body {
         height: 100%;
+        margin: 0;
+        padding: 0;
       }
-      
+
       body {
         font-family: Arial, sans-serif;
         font-size: 16px;
         color: #333;
         background-color: #f2f2f2;
-        margin: 0;
-        padding: 0;
+        display: flex;
+        flex-direction: column;
       }
 
       header {
@@ -50,10 +52,11 @@
       }
 
       main {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 20px;
-        height: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
       }
 
       h1, h2 {
@@ -116,13 +119,16 @@
         color: #fff;
         text-align: center;
         padding: 20px;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
       }
 
       footer p {
         margin: 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
       }
     </style>
   </head>
@@ -138,25 +144,25 @@
       </nav>
     </header>
     <main>
-      <h1>Contact</h1>
+      <h1>Contact
+</h1>
       <img src="https://images.unsplash.com/uploads/1413222992504f1b734a6/1928e537?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Image">
       <form action="submit.php" method="post">
         <label for="name">Name:</label>
         <input type="text" name="name" required>
-<label for="email">Email:</label>
-<input type="email" name="email" required>
-<label for="message">Message:</label>
-<textarea name="message" rows="6" required></textarea>
-<button type="submit">Submit</button>
-</form>
-</main>
-   <footer>
-<p>© 2023 David Chomba | <span id="currentYear"></span></p>
-</footer>
-<script>
-var currentYear = new Date().getFullYear();// Update the footer text with the current year
-  document.getElementById("currentYear").innerHTML = currentYear;
-</script>
-
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea name="message" rows="6" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <footer>
+      <p>© 2023 David Chomba | <span id="currentYear"></span></p>
+    </footer>
+    <script>
+      var currentYear = new Date().getFullYear();
+      document.getElementById("currentYear").innerHTML = currentYear;
+    </script>
   </body>
 </html>
