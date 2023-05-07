@@ -6,6 +6,8 @@
      <style>
       html, body {
         height: 100%;
+        margin: 0;
+        padding: 0;
       }
       
       body {
@@ -13,8 +15,6 @@
         font-size: 16px;
         color: #333;
         background-color: #f2f2f2;
-        margin: 0;
-        padding: 0;
       }
 
       header {
@@ -53,7 +53,8 @@
         max-width: 800px;
         margin: 0 auto;
         padding: 0 20px;
-        height: 100%;
+        padding-bottom: 60px; 
+        margin-bottom: 20px; 
       }
 
       h1, h2 {
@@ -87,7 +88,7 @@
         color: #fff;
         text-align: center;
         padding: 20px;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         width: 100%;
       }
@@ -117,5 +118,12 @@
       <h2>My Approach</h2>
       <p>My approach to web development and design is centered around the needs and goals of my clients. I work closely with each client to understand their specific requirements and objectives, and then I develop custom web solutions that meet those needs in a timely and cost-effective manner.</p><p>When I'm not working on web development projects, I enjoy hiking, reading, and spending time with my family. I am also passionate about entrepreneurship and technology, and I love exploring new business ideas and technologies that can help me and my clients succeed.</p>
     </main>
+    <footer>
+<p>© 2023 David Chomba | <span id="currentYear"></span></p>
+</footer>
+<script>
+var currentYear = new Date().getFullYear();// Update the footer text with the current year
+  document.getElementById("currentYear").innerHTML = currentYear;
+</script>
   </body>
 </html>
