@@ -149,9 +149,13 @@
 <button type="submit">Submit</button>
 </form>
 </main>
-<footer>
-<p>© 2023 David Chomba</p>
+   <footer>
+<p>© 2023 David Chomba | <span id="currentYear"></span></p>
 </footer>
+<script>
+var currentYear = new Date().getFullYear();// Update the footer text with the current year
+  document.getElementById("currentYear").innerHTML = currentYear;
+</script>
 
   </body>
 </html>
