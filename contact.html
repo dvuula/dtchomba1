@@ -6,8 +6,6 @@
     <style>
       html, body {
         height: 100%;
-        margin: 0;
-        padding: 0;
       }
       
       body {
@@ -15,6 +13,8 @@
         font-size: 16px;
         color: #333;
         background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
       }
 
       header {
@@ -53,8 +53,7 @@
         max-width: 800px;
         margin: 0 auto;
         padding: 0 20px;
-        padding-bottom: 60px; 
-        margin-bottom: 20px; 
+        height: 100%;
       }
 
       h1, h2 {
@@ -70,17 +69,46 @@
         font-size: 24px;
       }
 
-      img {
-        display: block;
-        margin: 20px auto;
-        max-width: 100%;
-        height: auto;
-      }
-
       p {
         line-height: 1.5;
         text-align: justify;
         margin-bottom: 20px;
+      }
+
+      form {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      label {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      input, textarea {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        resize: none;
+      }
+
+      button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        cursor: pointer;
+        transition: background-color .3s ease;
+      }
+
+      button:hover {
+        background-color: #444;
       }
 
       footer {
@@ -88,7 +116,7 @@
         color: #fff;
         text-align: center;
         padding: 20px;
-        position: fixed;
+        position: absolute;
         bottom: 0;
         width: 100%;
       }
@@ -111,7 +139,6 @@
     </header>
     <main>
       <h1>Contact</h1>
-      <img src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80" alt="Description of the image">
       <form action="submit.php" method="post">
         <label for="name">Name:</label>
         <input type="text" name="name" required>
@@ -122,9 +149,9 @@
 <button type="submit">Submit</button>
 </form>
 </main>
-    <script>
-var currentYear = new Date().getFullYear();// Update the footer text with the current year
-  document.getElementById("currentYear").innerHTML = currentYear;
-</script>
+<footer>
+<p>© 2023 David Chomba</p>
+</footer>
+
   </body>
 </html>
